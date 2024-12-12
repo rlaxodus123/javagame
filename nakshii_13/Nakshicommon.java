@@ -733,7 +733,7 @@ public class Nakshicommon extends JFrame {
 
 	
 	public void backtrack() {
-		if(location == 2 ) {
+		if(location == 2 ) {// 게임 진행 화면일 때
             Stages = true;  // 스테이지 선택 화면 활성화
             onStage = false;  // 게임 진행 화면 비활성화
             FishButton.setVisible(false);  // 물고기 버튼 비활성화
@@ -756,21 +756,21 @@ public class Nakshicommon extends JFrame {
 			
 			
 		}
-		else if(location == 1) {
-			Stages = false;
-			startButton.setVisible(true);
-			endButton.setVisible(true);
-			RstageButton.setVisible(false);
-			LstageButton.setVisible(false);
-			stagestartButton.setVisible(false);
-			backButton.setVisible(false);
-			replayButton.setVisible(false);
-			Bg = new ImageIcon(Main.class.getResource("../images/tempbg.jpg")).getImage();
-			location = 0;
+		else if(location == 1) {// 스테이지 선택 화면일 때
+            Stages = false;  // 스테이지 선택 화면 비활성화
+            startButton.setVisible(true);  // 시작 버튼 활성화
+            endButton.setVisible(true);  // 종료 버튼 활성화
+            RstageButton.setVisible(false);  // 오른쪽 스테이지 버튼 비활성화
+            LstageButton.setVisible(false);  // 왼쪽 스테이지 버튼 비활성화
+            stagestartButton.setVisible(false);  // 스테이지 시작 버튼 비활성화
+            backButton.setVisible(false);  // 뒤로가기 버튼 비활성화
+            replayButton.setVisible(false);  // 재시작 버튼 비활성화
+			Bg = new ImageIcon(Main.class.getResource("../images/tempbg.jpg")).getImage();// 배경 이미지 변경
+			location = 0;// 위치 플래그 업데이트 (메인 화면)
 		}
 		
 		else
-			location = 0;
+			location = 0;// 위치 초기화
 				
 				
 	}
